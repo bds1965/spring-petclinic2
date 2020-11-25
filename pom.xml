@@ -278,8 +278,33 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
+    
+      <repository>
+      <id>Chennakesavacharan</id>
+      <url>https://pkgs.dev.azure.com/Chennakesavacharan/_packaging/Chennakesavacharan/maven/v1</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+ 
   </repositories>
-
+    
+   <distributionManagement> 
+     <repository>
+     <id>Chennakesavacharan</id>
+     <url>https://pkgs.dev.azure.com/Chennakesavacharan/_packaging/Chennakesavacharan/maven/v1</url>
+     <releases>
+       <enabled>true</enabled>
+     </releases>
+     <snapshots>
+       <enabled>true</enabled>
+     </snapshots>
+     </repository>
+   </distributionManagement>
+  
   <pluginRepositories>
     <pluginRepository>
       <id>spring-snapshots</id>
