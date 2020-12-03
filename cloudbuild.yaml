@@ -1,24 +1,24 @@
 steps:
 #build docker container
-- name: 'gcr.io/cloud-builders/docker1'
-  args: [ 'build', '-t', 'gcr.io/devops-297210/petclinic:latest', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/devops-297210/petclinic', '.']
 
 #push container to container registry
-- name: 'gcr.io/cloud-builders/docker1'
-  args: [ 'push', 'gcr.io/devops-297210/petclinic:latest']
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'gcr.io/devops-297210/petclinic']
   
 #deploy to cloud run
-- name: 'gcr.io/cloud-builders/gcloud1'
+- name: 'gcr.io/cloud-builders/gcloud'
   args:
   - 'run'
   - 'deploy'
   - 'cloudrunservice'
   - '--image'
-  - 'gcr.io/devops-297210/petclinic:latest'
+  - 'gcr.io/devops-297210/petclinic'
   - '--region'
   - 'us-central1'
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
 images:
-  - 'gcr.io/devops-297210/petclinic:latest'
+  - 'gcr.io/devops-297210/petclinic'
