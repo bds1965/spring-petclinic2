@@ -1,14 +1,14 @@
 steps:
 #build docker container
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker1'
   args: [ 'build', '-t', 'gcr.io/devops-297210/petclinic:latest', '.']
 
 #push container to container registry
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker1'
   args: [ 'push', 'gcr.io/devops-297210/petclinic:latest']
   
 #deploy to cloud run
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/cloud-builders/gcloud1'
   args:
   - 'run'
   - 'deploy'
