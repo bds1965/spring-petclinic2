@@ -5,11 +5,11 @@ steps:
 
 #build docker container
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/velvety-byway-297210/petclinic', '--build-arg=JAR_FILE=target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar', '.']
+  args: [ 'build', '-t', 'gcr.io/devops-297210/petclinic', '--build-arg=JAR_FILE=target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar', '.']
 
 #push container to container registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'push', 'gcr.io/velvety-byway-297210/petclinic']
+  args: [ 'push', 'gcr.io/devops-297210/petclinic']
   
 #deploy to cloud run
 - name: 'gcr.io/cloud-builders/gcloud'
@@ -18,11 +18,11 @@ steps:
   - 'deploy'
   - 'cloudrunservice'
   - '--image'
-  - 'gcr.io/velvety-byway-297210/petclinic'
+  - 'gcr.io/devops-297210/petclinic'
   - '--region'
   - 'us-central1'
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
 images:
-  - 'gcr.io/velvety-byway-297210/petclinic'
+  - 'gcr.io/devops-297210/petclinic'
