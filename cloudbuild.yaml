@@ -12,7 +12,7 @@ steps:
   args: [ 'push', 'gcr.io/devops-297210/petclinic']
   
 #deploy to cloud run
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/cloud-builders/gcloud1'
   args:
   - 'run'
   - 'deploy'
@@ -26,4 +26,4 @@ steps:
   - 'managed'
   - '--allow-unauthenticated'
 images:
-  - 'gcr.io/devops-297210/petclinic'
+  - 'gcr.io/devops-297210/petclinic:'latest'
