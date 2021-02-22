@@ -18,7 +18,7 @@ steps:
   - 'deploy'
   - 'cloudrunservice'
   - '--image'
-  - 'gcr.io/devops-297210/petclinic'
+  - 'gcr.io/devops-297210/petclinic:latest'
   - '--region'
 #  - 'us-central1'
   - 'europe-west3'
