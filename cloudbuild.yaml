@@ -26,4 +26,4 @@ steps:
   - 'managed'
   - '--allow-unauthenticated'
 images:
-  - 'gcr.io/devops-297210/petclinic:'latest'
+  - 'gcr.io/devops-297210/petclinic:latest'
