@@ -25,7 +25,7 @@ push container to container registry
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
-  timeout: 3600
-timeout: 3600
+#  timeout: 3600
+#timeout: 3600
 images:
   - 'gcr.io/velvety-byway-297210/petclinic:latest'
