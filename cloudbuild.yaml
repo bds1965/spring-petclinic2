@@ -7,7 +7,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/velvety-byway-297210/petclinic', '--build-arg=JAR_FILE=target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar', '.']
 
-push container to container registry
+#push container to container registry
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'push', 'gcr.io/velvety-byway-297210/petclinic']
   
