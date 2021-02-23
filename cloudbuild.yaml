@@ -1,15 +1,15 @@
 steps:
-#- name: maven:3-jdk-8
-#  entrypoint: mvn
-##  args: ['package', '-Dmaven.skip.test=true']
+- name: maven:3-jdk-8
+  entrypoint: mvn
+  args: ['package', '-Dmaven.skip.test=true']
 
 #build docker container
-#- name: 'gcr.io/cloud-builders/docker'
-#  args: [ 'build', '-t', 'gcr.io/devops-297210/petclinic', '--build-arg=JAR_FILE=target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/velvety-byway-297210/petclinic', '--build-arg=JAR_FILE=target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar', '.']
 
-#push container to container registry
-#- name: 'gcr.io/cloud-builders/docker'
-#  args: [ 'push', 'gcr.io/devops-297210/petclinic']
+push container to container registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'gcr.io/velvety-byway-297210/petclinic']
   
 #deploy to cloud run
 - name: 'gcr.io/cloud-builders/gcloud'
@@ -18,12 +18,14 @@ steps:
   - 'deploy'
   - 'cloudrunservice'
   - '--image'
-  - 'gcr.io/devops-297210/petclinic:latest'
+  - 'gcr.io/velvety-byway-297210/petclinic:latest'
   - '--region'
 #  - 'us-central1'
   - 'europe-west3'
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
+  timeout: 3600
+timeout: 3600
 images:
-  - 'gcr.io/devops-297210/petclinic:latest'
+  - 'gcr.io/velvety-byway-297210/petclinic:latest'
