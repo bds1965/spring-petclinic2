@@ -26,7 +26,7 @@ steps:
   - 'managed'
   - '--allow-unauthenticated'
 #  timeout: 3600
-timeout: 3600
+#timeout: 3600
 images:
   - 'gcr.io/devops-297210/petclinic:latest'
 tags:
