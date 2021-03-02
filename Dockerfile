@@ -2,7 +2,8 @@ FROM openjdk:8
 MAINTAINER Chennakesava C
 ADD target/*.jar petclinic.jar
 #ENTRYPOINT ["java", "-jar", "petclinic.jar"]
-ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=mysql", "petclinic.jar", ">", "/var/log/petclinic.log", "2>&1"]
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=mysql", "petclinic.jar"] 
+#, ">", "/var/log/petclinic.log", "2>&1"]
 EXPOSE 8080
 #EXPOSE 7070
 VOLUME /tmp
