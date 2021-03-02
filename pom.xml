@@ -280,18 +280,18 @@
     </repository>
  
       
-  <!--    
-#    <repository>
-#      <id>Chennakesavacharan</id>
-#      <url>https://pkgs.dev.azure.com/Chennakesavacharan/_packaging/Chennakesavacharan/maven/v1</url>
-#      <releases>
-#        <enabled>true</enabled>
-#      </releases>
-#      <snapshots>
-#        <enabled>true</enabled>
-#      </snapshots>
-#    </repository>
-#  </repositories>
+      
+    <repository>
+      <id>Chennakesavacharan</id>
+      <url>https://pkgs.dev.azure.com/Chennakesavacharan/_packaging/Chennakesavacharan/maven/v1</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
     
   <distributionManagement>
@@ -306,7 +306,7 @@
       </snapshots>
     </repository>
   </distributionManagement>
--->    
+  
     
   <pluginRepositories>
     <pluginRepository>
