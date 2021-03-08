@@ -12,19 +12,19 @@ steps:
   args: [ 'push', 'gcr.io/project-one-300206/petclinic']
   
 #deploy to cloud run
-- name: 'gcr.io/cloud-builders/gcloud'
-  args:
-  - 'run'
-  - 'deploy'
-  - 'cloudrunservice'
-  - '--image'
-  - 'gcr.io/project-one-300206/petclinic:latest'
-  - '--region'
+#- name: 'gcr.io/cloud-builders/gcloud'
+# args:
+#  - 'run'
+#  - 'deploy'
+# - 'cloudrunservice'
+# - '--image'
+# - 'gcr.io/project-one-300206/petclinic:latest'
+# - '--region'
 #  - 'us-central1'
-  - 'europe-west3'
-  - '--platform'
-  - 'managed'
-  - '--allow-unauthenticated'
+# - 'europe-west3'
+#  - '--platform'
+#  - 'managed'
+#  - '--allow-unauthenticated'
 #  timeout: 3600
 #timeout: 3600
 images:
